@@ -1,0 +1,159 @@
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Helvetica", sans-serif;
+}
+
+/*custom css for scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 0.8rem;
+  border-radius: 0.55rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1c1d21;
+  border-radius: 0.55rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #36373d;
+  border-radius: 0.55rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0) d21;
+}
+
+.css-19rwt2y-MuiPaper-root {
+  background-color: #33343a !important;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 240px;
+  width: 240px;
+  height: 100%;
+  border-right: 1px solid;
+  border-color: #33343a;
+  background-color: #1c1d21;
+  margin: -1.5rem -1rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #38444d;
+}
+
+#header-hr {
+  margin-bottom: -16px;
+}
+
+.code-container {
+  background-color: #38444d;
+  padding: 6px 6px 6px 6px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.code-container h3 {
+  margin-left: 10px;
+}
+
+#nav-header {
+  padding-top: 10px;
+  font-size: 1.6em;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  position: relative;
+  width: 100%;
+}
+
+#navbar li:hover {
+  transition: all 0.1s ease;
+  background-color: #33343a;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #15202b;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.code-text {
+  color: f29999;
+}
+
+.html-code-text {
+  color: #a3a5c5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* unvisited link */
+a:link {
+  color: #af0000;
+}
+
+/* visited link */
+a:visited {
+  color: #af0000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #af0000;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
