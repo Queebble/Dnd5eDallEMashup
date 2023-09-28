@@ -13,7 +13,6 @@ import FireplaceIcon from "@mui/icons-material/Fireplace";
 import PortraitSharpIcon from "@mui/icons-material/PortraitSharp";
 import LibraryBooksSharpIcon from "@mui/icons-material/LibraryBooksSharp";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
-import { useGetCountQuery } from "../state/api";
 import { Typography } from "@mui/material";
 
 // Define the width of the sidebar/drawer
@@ -87,10 +86,6 @@ const Sidebar = ({ isSidebarOpen }) => {
     pathname === "/" ? "home" : pathname.slice(1)
   );
   const navigate = useNavigate();
-
-  // Use the useGetCountQuery hook to fetch the count of users
-  const { data } = useGetCountQuery();
-  const users = data?.count;
 
   // Helper function to handle navigation to a route
   const handleNavigation = (route) => {
@@ -335,23 +330,6 @@ const Sidebar = ({ isSidebarOpen }) => {
           color={theme.palette.buttonborder.default}
           sx={{ margin: "0px 15px 0px 15px", borderRadius: "1px" }}
         />
-
-        {/* Content to display when the sidebar is open or closed */}
-        {isSidebarOpen ? (
-          // Content to display when the sidebar is open
-          <Box mt="10px" style={{ textAlign: "center" }}>
-            <Typography variant="h4" color={theme.palette.white.default}>
-              Total Users: {users}
-            </Typography>
-          </Box>
-        ) : (
-          // Content to display when the sidebar is closed
-          <Box mt="10px" style={{ textAlign: "center" }}>
-            <Typography variant="h2" color={theme.palette.white.default}>
-              {users}
-            </Typography>
-          </Box>
-        )}
       </Drawer>
     </Box>
   );

@@ -1,21 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// Function to fetch configuration data from a JSON file
-export async function fetchConfig() {
-  const response = await fetch("/config.json");
-  const config = await response.json();
-  return config.backendAPI;
-}
-
 // Create an API using createApi
 export const api = createApi({
-  baseQuery: async (args, api) => {
-    // Call fetchConfig to get the dynamic baseUrl
-    const baseUrl = await fetchConfig();
-
-    // Use fetchBaseQuery with the dynamic baseUrl
-    return fetchBaseQuery({ baseUrl })(args, api);
-  },
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }), // Configure the base URL for all requests
+  reducerPath: "adminApi", // Define the slice name for the reducer that will be created
   tagTypes: [
     // Define tag types for caching
     "counter",
