@@ -735,11 +735,17 @@ const Home = () => {
               borderRadius="0.55rem"
               backgroundColor={theme.palette.buttonborder.default}
               padding="15px"
+              maxWidth="1095px"
             >
               <Box borderRadius="0.55rem">
                 <img
                   src={userGuideOne}
-                  style={{ width: "100%", height: "auto" }}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    maxWidth: "1080px",
+                    maxHeight: "1920px",
+                  }}
                 />
               </Box>
             </Box>
@@ -773,11 +779,17 @@ const Home = () => {
               borderRadius="0.55rem"
               backgroundColor={theme.palette.buttonborder.default}
               padding="15px"
+              maxWidth="1095px"
             >
               <Box borderRadius="0.55rem">
                 <img
                   src={userGuideTwo}
-                  style={{ width: "100%", height: "auto" }}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    maxWidth: "1080px",
+                    maxHeight: "1920px",
+                  }}
                 />
               </Box>
             </Box>
