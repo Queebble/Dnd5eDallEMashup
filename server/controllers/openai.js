@@ -108,6 +108,8 @@ export const generateImage1024 = async (req, res) => {
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
+          model: "dall-e-3",
+          quality: "hd",
           prompt: prompt,
           n: 1,
           size: "1024x1024",
